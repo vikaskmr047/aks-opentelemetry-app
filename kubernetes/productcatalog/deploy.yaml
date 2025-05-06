@@ -60,5 +60,3 @@ spec:
           resources:
             limits:
               memory: 20Mi
-          volumeMounts:
-      volumes:
