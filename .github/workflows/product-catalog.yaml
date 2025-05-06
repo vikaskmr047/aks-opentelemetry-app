@@ -80,7 +80,7 @@ jobs:
     updatek8s_manifest:
         runs-on: ubuntu-latest
 
-        needs: docker
+        needs: [build, docker]
 
         steps:
         - name: checkout code
