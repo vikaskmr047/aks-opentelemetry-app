@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: opentelemetryapp 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: opentelemetryapp
+  template:
+    metadata:
+      labels:
+        app: opentelemetryapp 
+    spec:
+      containers:
+        - name: opentelemetryapp 
+          image: apptelemetry.azurecr.io/opentelemetryapp
+          ports:
+          - containerPort: 80
